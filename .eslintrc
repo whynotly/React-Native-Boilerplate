@@ -14,14 +14,8 @@
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": [
-        "@typescript-eslint",
-        "unused-imports",
-        "tailwindcss",
-        "simple-import-sort"
-      ],
+      "plugins": ["@typescript-eslint", "unused-imports", "simple-import-sort"],
       "extends": [
-        "plugin:tailwindcss/recommended",
         "airbnb",
         "airbnb-typescript",
         "airbnb/hooks",
@@ -50,6 +44,18 @@
             "": "never"
           }
         ], // Avoid missing file extension errors when using '@/' alias
+        "global-require": "off", // Disabled to allow dynamic 'require' imports which are necessary for images to render properly.
+        "no-param-reassign": "off",
+        "no-nested-ternary": "off",
+        "@typescript-eslint/return-await": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "no-underscore-dangle": "off",
+        "react/prop-types": "off", // Disabled as we're using TypeScript for type-checking instead of PropTypes.
+        "import/no-cycle": "off", // Temporarily disabled while we address refactoring of existing cyclic dependencies in the project structure.
+        "react/no-unused-prop-types": "off", // Disabled because the current project phase includes prototyping where props may be defined before use.
+        "react/no-array-index-key": "off", // Disabled because the lists we render are static and do not undergo sorting or updating that would otherwise lead to performance issues.
+        "react-hooks/exhaustive-deps": "off", // Disabled to allow manual control of dependency arrays in React hooks, useful in complex hooks where listing all dependencies would trigger unnecessary re-renders.
+        "react/style-prop-object": "off", // Disabled as we're not enforcing the use of plain objects for style props.
         "react/function-component-definition": "off", // Disable Airbnb's specific function type
         "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
         "react/require-default-props": "off", // Allow non-defined react props as undefined

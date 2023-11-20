@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "react-native-boilerplate",
-    "slug": "react-native-boilerplate",
+    "name": "Pinposh",
+    "slug": "pinposh",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "scheme": "myapp",
+    "scheme": "pinposh",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -15,19 +15,27 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.reactnativeboilerplate"
+      "bundleIdentifier": "com.pinposh.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.reactnativeboilerplate"
+      "package": "com.pinposh.app"
+    },
+    "extra": {
+      "sentryKey": "https://2a6da8916c89400a96688e079019191e@o4504515579871232.ingest.sentry.io/4504515582951424",
+      "expoProjectId": "f7d53ea7-89e7-40d6-8aa3-a1cd07006ac6",
+      "posthogAPI": "phc_fcrRUZh1tGZgvxFD4m7sGL1m2Na6JNH4iBQ4YpcNj2i",
+      "eas": {
+        "projectId": "f7d53ea7-89e7-40d6-8aa3-a1cd07006ac6"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
-    "plugins": ["@config-plugins/detox", "expo-router"]
+    "plugins": ["@config-plugins/detox", "sentry-expo"]
   }
 }
