@@ -9,14 +9,13 @@ import {
   Ionicons,
   MaterialIcons,
 } from '@expo/vector-icons';
-import { FlashList } from '@shopify/flash-list';
 import {
   ActivityIndicator,
+  FlatList,
   Image,
   Platform,
   SafeAreaView,
   StatusBar,
-  FlatList,
   StyleSheet,
   Text,
   View,
